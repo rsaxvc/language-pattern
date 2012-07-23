@@ -1,0 +1,30 @@
+some thing that seem necessary to represent a C++ - like language
+	indentions are children of the unindented item or notes about the item
+
+class-definition
+	list of class variables(marked static/private/public/protected)
+	list of class functions(marked static/friend/private/public/protected)
+	list of inherited parent classes(marked public/private...)
+	- you can imply a 'global' class to cover things that aren't otherwise in classes
+
+scope-definition
+	list of variables
+		some variables are declared as inside the scope
+		some variables are declared as arguments to the scope(function parameters)
+		some variables also execute statements(like class contructors, or int x = rand() )
+	list of statements
+		some statements have subscopes(if/while/when)
+		some statements exit/circumvent scopes(break/continue/goto/return)
+
+function-definition
+	namespace-name/class-name/function-name
+	a scope-definition
+	return-type
+	parameters
+	static functions could be implemented with a class-specific namespace
+
+namespace-definition
+	a list of variables
+	a list of classes
+	a list of functions
+	- you can imply a 'global' namespace to cover things that aren't namespaced
